@@ -26,7 +26,11 @@ RSpec.describe Ride do
     end
 
     it 'can report the total distance' do 
-      
+      ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
+
+      ride1.total_distance
+
+      expect(ride1.total_distance).to eq(21.4)
     end
   end
 end
