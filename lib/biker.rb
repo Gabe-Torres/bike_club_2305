@@ -14,4 +14,8 @@ class Biker
   def learn_terrain!(terrain)
     acceptable_terrain << terrain
   end
+
+  def log_ride(ride_data)
+    
+  end
 end
