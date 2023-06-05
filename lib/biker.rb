@@ -15,7 +15,21 @@ class Biker
     acceptable_terrain << terrain
   end
 
-  def log_ride(ride_data)
-    
+  def log_ride(ride, time)
+    if ride.distance < @max_distance
+      @acceptable_terrain.include?(ride.terrain)
+      @ride.each do |ride, time|
+        @rides[ride] << time
+      end
+      @rides[ride] = [time]
+    end
   end
+
+  # def personal_record(ride)
+  #   if @rides[ride]
+  #     @rides[ride].min
+  #   else 
+  #     false 
+  #   end
+  # end
 end
