@@ -32,5 +32,19 @@ RSpec.describe Ride do
 
       expect(ride1.total_distance).to eq(21.4)
     end
+
+    it 'can have more rides' do 
+      ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})
+
+      expect(ride2).to be_an_instance_of(Ride)
+    end
+
+    it 'can indicate if the new ride is a loop or not' do 
+      ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})
+
+      ride2.loop? 
+
+      expect(ride2.loop?).to eq(true)
+    end
   end
 end
