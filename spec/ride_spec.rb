@@ -24,5 +24,9 @@ RSpec.describe Ride do
 
       expect(ride1.loop?).to eq(false)
     end
+
+    it 'can report the total distance' do 
+      
+    end
   end
 end
